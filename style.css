@@ -25,17 +25,20 @@ body {
   color: var(--text);
 }
 
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9rem;
+}
+
 /* HEADER */
 header {
   background: var(--secondary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 6rem;
-}
-
-.logo {
-  margin-left: 40px;
+  padding: 1rem 9rem;
 }
 
 .logo a {
@@ -103,8 +106,126 @@ header {
 }
 
 .nav-icons .bi{
-  font-size: 18px;
-  font-weight:  extra-bold;
+  font-size: 20px;
   cursor: pointer;
+  color: var(--primary);
+  transition: transform 0.2s ease;
+}
+
+.nav-icons .bi:hover{
+  transform: scale(1.05);
+}
+
+/* HERO */
+#hero {
+  width: 100%;
+  height: 90vh;
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9rem;
+  gap: 6rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+
+.hero-content p {
+  font-size: 68px;
+  font-weight: 400;
+  color: var(--primary);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero-content button {
+background: transparent;
+  border: 1px solid var(--primary);
+  padding: 12px 46px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 28px;
+ }
+
+.hero-btn {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.hero-img {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  position: relative;
+}
+
+.hero-img img {
+  object-fit: cover
+  border-radius: 12px;
+}
+
+.hero-img img:first-child {
+  border-radius: 6px;
+  width: 400px;
+  height: 550px;
+  margin-right: 170px;
+}
+
+.hero-img img:last-child {
+  position: absolute;
+  top: 30%;
+  right: 13%;
+  border-radius: 90px 90px 0 0;
+  width: 180px;
+  height: 250px;
+}
+
+.img-icon {
+  position: absolute;
+  top: 270px;
+  left: 380px;
+  color: #fff;
+  font-size: 42px;
+  z-index: 1;
+  opacity: 70%;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.img-icon:hover {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+/* FEATURES */
+#features-grid {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#features-grid div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#features-grid div p {
+  line-height: 1.4;
+  text-align: center;
+  width: 68%;
+}
+
+#features-grid i {
+  font-size: 45px;
   color: var(--primary);
 }
