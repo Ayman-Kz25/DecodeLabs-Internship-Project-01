@@ -1,3 +1,4 @@
+// CAROUSEL FUNCTIONALITY
 const slides = document.querySelectorAll(".slide");
 
 const prevBtn = document.querySelector(".prev-btn");
@@ -46,3 +47,28 @@ function restartAutoPlay() {
 }
 
 updateCarousel();
+
+// LETTER CHANGING FUNCRTIONALITY
+const letters = document.querySelectorAll(".letter");
+const nextLetterBtn = document.querySelector(".letter-controls .next-btn");
+const prevLetterBtn = document.querySelector(".letter-controls .prev-btn");
+
+let index = 0;
+
+function showLetter(i) {
+  letters.forEach(l => l.classList.remove("active"));
+
+  index = (i + letters.length) % letters.length;
+
+  letters[index].classList.add("active");
+}
+
+showLetter(index);
+
+nextLetterBtn.addEventListener("click", () => {
+  showLetter(index + 1);
+});
+
+prevLetterBtn.addEventListener("click", () => {
+  showLetter(index - 1);
+});
